@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
+#include "lista.h"
+#include "orddist.h"
+#include <cstdlib>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    orddist o;
+    o.carrega();
+    o.ordena();
+    system("pause");
     return 0;
 }
