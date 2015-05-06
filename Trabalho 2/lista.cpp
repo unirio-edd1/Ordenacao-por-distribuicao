@@ -1,4 +1,13 @@
 #include "lista.h"
+
+lista::~lista(){
+    elo *p = prim;
+    while(prim!=NULL){
+        p=prim->prox;
+        delete prim;
+        prim=p;
+    }
+}
 /*
  a. Função vazia, que determina se a lista está vazia ou não.
  */
@@ -26,11 +35,11 @@ void lista::insere(const int &novo){
     }
     else{
         elo * p;
-        for(p=prim; p!=NULL; p=p->prox){
-            if(p->prox == NULL){
-                p->prox = new elo(novo);
-            }
-        }
+        elo * ultimo;
+        for(p=prim; p!=NULL; p=p->prox)
+            if(p->prox == NULL)
+                ultimo = p;
+        ultimo->prox = new elo(novo);
     }
 }
 
