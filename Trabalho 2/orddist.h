@@ -4,7 +4,7 @@
 class orddist{
 protected:
     int b;              /* base */
-    int d;              /* comprimento m ́aximo do digito */
+    int d;              /* comprimento máximo do digito */
     lista* filas;       /* vetor de listas */
     lista L;            /* lista inicial e que sera ordenada */
 public:

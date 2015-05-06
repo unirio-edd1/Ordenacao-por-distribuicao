@@ -35,7 +35,7 @@ void lista::insere(const int &novo){
     }
     else{
         elo * p;
-        elo * ultimo;
+        elo * ultimo = nullptr;
         for(p=prim; p!=NULL; p=p->prox)
             if(p->prox == NULL)
                 ultimo = p;

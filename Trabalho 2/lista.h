@@ -1,3 +1,6 @@
+#ifndef LISTA_H
+#define LISTA_H
+
 #include <iostream>
 using namespace std;
 
@@ -21,3 +24,5 @@ public:
     int maior_comprimento();
     void imprime() const;
 };
+
+#endif
