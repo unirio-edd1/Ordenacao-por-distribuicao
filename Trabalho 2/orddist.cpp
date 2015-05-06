@@ -9,8 +9,7 @@
 #include "orddist.h"
 #define TOTAL_DE_ITEMS 5
 
-int Menu()
-{
+int Menu(){
     int escolha;
     
     cout << "--------------------------\n";
