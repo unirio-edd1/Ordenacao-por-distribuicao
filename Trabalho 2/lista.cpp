@@ -21,7 +21,17 @@ void lista::imprime() const{
  b. Função void insere(const int& novo), que insere novo no final da lista.
  */
 void lista::insere(const int &novo){
-    
+    if(vazia()){
+        prim = new elo(novo);
+    }
+    else{
+        elo * p;
+        for(p=prim; p!=NULL; p=p->prox){
+            if(p->prox == NULL){
+                p->prox = new elo(novo);
+            }
+        }
+    }
 }
 
 /*
