@@ -1,14 +1,45 @@
 #include "lista.h"
-
+/*
+ a. Função vazia, que determina se a lista está vazia ou não.
+ */
 bool lista::vazia(){
     return (prim == NULL);
 }
 
-/* f. Função imprime(), que imprime os elementos da lista. */
+/* 
+ f. Função imprime(), que imprime os elementos da lista. 
+ */
 void lista::imprime() const{
     elo *p;
     cout << "Elementos da lista" << endl;
     for(p=prim; p!=NULL; p=p->prox)
         cout << p->dado << ' ';
     cout << endl;
+}
+
+/*
+ b. Função void insere(const int& novo), que insere novo no final da lista.
+ */
+void lista::insere(const int &novo){
+    
+}
+
+int lista::qtd_digitos(int elem){
+    
+}
+
+/*
+d. Função int maior_comprimento(). Esta função percorre a lista de inteiros que chamou a função e, para cada elemento da lista, calcula o comprimento do elemento, armazenando o valor do maior comprimento entre todos os elementos. No final, a função retorna o maior comprimento de inteiro entre todos os elementos da lista. A função usa a função auxiliar int qtd_digitos(int elem) que retorna a quantidade de dígitos de um inteiro.
+*/
+
+int lista::maior_comprimento(){
+    int maior = 0;
+    elo * p;
+    
+    for(p=prim; p!=NULL; p=p->prox){
+        int digitos = qtd_digitos(p->dado);
+        if (digitos > maior)
+            maior = digitos;
+    }
+    return maior;
 }
