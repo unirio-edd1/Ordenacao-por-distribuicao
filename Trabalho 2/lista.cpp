@@ -24,8 +24,24 @@ void lista::insere(const int &novo){
     
 }
 
+/*
+ Função auxiliar que retorna a quantidade de dígitos de um inteiro. Se o valor for 0, retorna 1, caso contrário, inicia-se um laço sobre uma divisão por 10, que serve para quebrar um número, resultando no seguinte chinês:
+        elem = 666  | cont = 0
+        elem = 66   | cont = 1
+        elem = 6    | cont = 2
+        elem = 0    | cont = 3
+ 
+ */
 int lista::qtd_digitos(int elem){
-    
+    if (elem == 0)
+        return 1;
+    else{
+        int cont;
+        for (cont = 0; elem != 0; elem /= 10) {
+            cont++;
+        }
+        return cont;
+    }
 }
 
 /*
