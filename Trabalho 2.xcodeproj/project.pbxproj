@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66BFA50C1AFA651E0017D104 /* lista.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66BFA5061AFA651E0017D104 /* lista.cpp */; };
+		66BFA50D1AFA651E0017D104 /* orddist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66BFA5081AFA651E0017D104 /* orddist.cpp */; };
 		66EAEC371AEFBCAD006B7705 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EAEC361AEFBCAD006B7705 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		66BFA5061AFA651E0017D104 /* lista.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lista.cpp; sourceTree = "<group>"; };
+		66BFA5071AFA651E0017D104 /* lista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lista.h; sourceTree = "<group>"; };
+		66BFA5081AFA651E0017D104 /* orddist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = orddist.cpp; sourceTree = "<group>"; };
+		66BFA5091AFA651E0017D104 /* orddist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orddist.h; sourceTree = "<group>"; };
 		66EAEC331AEFBCAD006B7705 /* Trabalho 2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Trabalho 2"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EAEC361AEFBCAD006B7705 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +63,10 @@
 		66EAEC351AEFBCAD006B7705 /* Trabalho 2 */ = {
 			isa = PBXGroup;
 			children = (
+				66BFA5061AFA651E0017D104 /* lista.cpp */,
+				66BFA5071AFA651E0017D104 /* lista.h */,
+				66BFA5081AFA651E0017D104 /* orddist.cpp */,
+				66BFA5091AFA651E0017D104 /* orddist.h */,
 				66EAEC361AEFBCAD006B7705 /* main.cpp */,
 			);
 			path = "Trabalho 2";
@@ -119,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				66EAEC371AEFBCAD006B7705 /* main.cpp in Sources */,
+				66BFA50D1AFA651E0017D104 /* orddist.cpp in Sources */,
+				66BFA50C1AFA651E0017D104 /* lista.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +247,7 @@
 				66EAEC3C1AEFBCAD006B7705 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
