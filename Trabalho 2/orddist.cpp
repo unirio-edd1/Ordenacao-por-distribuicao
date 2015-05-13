@@ -46,7 +46,7 @@ void orddist::carrega(){
                 break;
         }
     }
-    
+    d = L.maior_comprimento();
 }
 
 /*
