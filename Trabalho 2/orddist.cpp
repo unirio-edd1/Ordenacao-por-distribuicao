@@ -7,6 +7,8 @@
 //
 
 #include "orddist.h"
+#include "lista.h"
+#include "math.h"
 #define TOTAL_DE_ITEMS 5
 
 int Menu(){
@@ -24,11 +26,13 @@ int Menu(){
 /*
  a. O construtor da classe atualiza o valor de b = 10 e inicializa o vetor filas com b elementos do tipo lista.
  */
-orddist::orddist(int base): b(base), filas(new lista[30])
+orddist::orddist(int base): b(base), filas(new lista[base])
 {}
 
 /*
- b. Função void carrega(). Esta função lê, via teclado, uma lista de números e insere em L. Em seguida, calcula o maior comprimento da representação das chaves na base b e armazena seu valor no atributo d da classe. Para tal, chama a função maior_comprimento da classe lista.
+ b. Função void carrega(). Esta função lê, via teclado, uma lista de números e insere em L. Em seguida, calcula 
+ o maior comprimento da representação das chaves na base b e armazena seu valor no atributo d da classe. 
+ Para tal, chama a função maior_comprimento da classe lista.
  */
 void orddist::carrega(){
     int item, escolha;
@@ -50,8 +54,38 @@ void orddist::carrega(){
 }
 
 /*
+ Dado um número `number` a função retorna o dígito correspondente a posição passada em `digit`
+ */
+int getDigit(int number, int digit){
+    number /= pow(10, digit);
+    return number % 10;
+}
+
+/*
+ Dada uma lista `l`, a função remove todos os itens da mesma
+ */
+void limparLista(lista &l){
+    int elem;
+    while (l.remove(elem)){}
+}
+
+/*
  c. Função void ordena(). Esta função faz a ordenação propriamente dita.
 */
 void orddist::ordena(){
-    
+    for (int i=0; i<d; i++) {
+        for(lista::elo * p=L.prim; p!=NULL; p=p->prox){
+            int numero = p->dado;
+            int numeroDaFila = getDigit(numero, i);         // Obtém dígito do elemento na posição i
+            filas[numeroDaFila].insere(numero);             // Adiciona elemento na fila numeroDaFila
+        }
+        limparLista(L);
+        // Concatena as `k` filas
+        for (int k=0; k<b; k++){
+            for(lista::elo * p=filas[k].prim; p!=NULL; p=p->prox)
+                L.insere(p->dado);
+            limparLista(filas[k]);
+        }
+    }
+    L.imprime();
 }
