@@ -74,17 +74,16 @@ void limparLista(lista &l){
 */
 void orddist::ordena(){
     for (int i=0; i<d; i++) {
-        for(lista::elo * p=L.prim; p!=NULL; p=p->prox){
-            int numero = p->dado;
+        int numero;
+        while(L.remove(numero)){
             int numeroDaFila = getDigit(numero, i);         // Obtém dígito do elemento na posição i
             filas[numeroDaFila].insere(numero);             // Adiciona elemento na fila numeroDaFila
         }
-        limparLista(L);
         // Concatena as `k` filas
         for (int k=0; k<b; k++){
-            for(lista::elo * p=filas[k].prim; p!=NULL; p=p->prox)
-                L.insere(p->dado);
-            limparLista(filas[k]);
+            while(filas[k].remove(numero)){
+                L.insere(numero);
+            }
         }
     }
     L.imprime();
