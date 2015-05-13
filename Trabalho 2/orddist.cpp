@@ -80,11 +80,9 @@ void orddist::ordena(){
             filas[numeroDaFila].insere(numero);             // Adiciona elemento na fila numeroDaFila
         }
         // Concatena as `k` filas
-        for (int k=0; k<b; k++){
-            while(filas[k].remove(numero)){
+        for (int k=0; k<b; k++)
+            while(filas[k].remove(numero))
                 L.insere(numero);
-            }
-        }
     }
     L.imprime();
 }
