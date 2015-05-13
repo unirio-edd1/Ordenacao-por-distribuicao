@@ -5,7 +5,7 @@
 using namespace std;
 
 class lista{
-protected:
+public:
     struct elo{
         int dado;
         elo * prox;
