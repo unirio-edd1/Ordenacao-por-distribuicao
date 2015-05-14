@@ -62,14 +62,6 @@ int getDigit(int number, int digit){
 }
 
 /*
- Dada uma lista `l`, a função remove todos os itens da mesma
- */
-void limparLista(lista &l){
-    int elem;
-    while (l.remove(elem)){}
-}
-
-/*
  c. Função void ordena(). Esta função faz a ordenação propriamente dita.
 */
 void orddist::ordena(){
